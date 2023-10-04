@@ -75,6 +75,7 @@
                 <th>Description</th>
                 <th>Date Added</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>`
             products.forEach((item) => {
                 htmlString += `\n<tr>
@@ -82,6 +83,20 @@
                 <td>${item.fields.price}</td>
                 <td>${item.fields.description}</td>
                 <td>${item.fields.date_added}</td>
+                <td>
+                    <a href="edit-product/${item.pk}">
+                        <button> 
+                            Edit 
+                        </button>
+                    </a>
+                </td>
+                <td>
+                    <a href="delete/${item.pk}">
+                        <button> 
+                            Delete 
+                        </button>
+                    </a>
+                </td>
             </tr>` 
             })
             
